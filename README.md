@@ -33,6 +33,9 @@ yarn run start
 # Start building
 yarn run build
 
+# Publish package
+yarn publish
+
 # Run type check
 yarn run type-check
 
