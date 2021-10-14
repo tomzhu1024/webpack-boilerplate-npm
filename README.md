@@ -2,7 +2,7 @@
 
 # Webpack Boilerplate NPM
 
-A good starting point for using webpack to build NPM packages.
+A good starting point for using webpack to build npm packages.
 
 ## Features
 
