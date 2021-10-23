@@ -6,10 +6,7 @@ A good starting point for using webpack to build npm packages.
 
 ## Features
 
-- Webpack 5
-- React 17
-- TypeScript support
-- Less support
+- Webpack 5, React 17, TypeScript, Less
 - Lint codes with [ESLint](https://www.npmjs.com/package/eslint) + [stylelint](https://www.npmjs.com/package/stylelint) + [Prettier](https://www.npmjs.com/package/prettier)
 - Lint commit messages with [commitlint](https://www.npmjs.com/package/@commitlint/cli)
 - Automated pre-commit code check with [husky](https://www.npmjs.com/package/husky) + [lint-staged](https://www.npmjs.com/package/lint-staged)
