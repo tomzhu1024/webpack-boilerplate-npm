@@ -17,17 +17,11 @@
     "jsx": "react",
     "noImplicitAny": true,
     "preserveConstEnums": true,
-    "removeComments": true,
     "skipLibCheck": true,
     "typeRoots": [
       "node_modules/@types"
     ],
-    "baseUrl": ".",
-    "paths": {
-      "@/*": [
-        "./src/*"
-      ]
-    }
+    "baseUrl": "."
   },
   "include": [
     "src/**/*"
