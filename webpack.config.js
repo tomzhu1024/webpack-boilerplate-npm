@@ -57,7 +57,7 @@ let config = {
             options: {
               name: '[name]_[hash:6].[ext]',
               esModule: false,
-              limit: 1024,
+              limit: 0,
             },
           },
         ],
