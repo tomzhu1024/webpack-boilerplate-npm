@@ -1,5 +1,5 @@
 import * as React from 'react';
-import style from '@/style/default.module.less';
+import style from './style/default.module.less';
 
 const myFunction = (a: number, b: number): number => a + b;
 
