@@ -61,7 +61,6 @@
     "less": "^4.1.1",
     "less-loader": "^10.0.1",
     "lint-staged": "^11.0.1",
-    "mini-css-extract-plugin": "^2.1.0",
     "mobx": "^6.3.2",
     "mobx-react": "^7.2.0",
     "prettier": "^2.3.2",
@@ -80,6 +79,7 @@
     "webpack": "^5.58.2",
     "webpack-cli": "^4.9.0",
     "webpack-merge": "^5.8.0",
+    "webpack-strip-block": "^0.3.0",
     "webpackbar": "^5.0.0-3"
   }
 }

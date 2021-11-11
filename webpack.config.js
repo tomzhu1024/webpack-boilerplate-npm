@@ -1,7 +1,6 @@
 const path = require('path');
 const { merge } = require('webpack-merge');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const WebpackBarPlugin = require('webpackbar');
 const FriendlyErrorsWebpackPlugin = require('@soda/friendly-errors-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
@@ -36,12 +35,12 @@ let config = {
       },
       {
         test: /\.css$/i,
-        use: [isDevelopment ? 'style-loader' : MiniCssExtractPlugin.loader, 'css-loader'],
+        use: ['style-loader', 'css-loader'],
       },
       {
         test: /\.less$/i,
         use: [
-          isDevelopment ? 'style-loader' : MiniCssExtractPlugin.loader,
+          'style-loader',
           'css-loader',
           {
             loader: 'less-loader',
@@ -86,9 +85,26 @@ if (isDevelopment) {
   config = merge(config, {
     mode: 'production',
     stats: true,
+    module: {
+      rules: [
+        {
+          test: /\.[jt]sx?$/i,
+          enforce: 'pre',
+          exclude: /node_modules/,
+          use: [
+            {
+              loader: 'webpack-strip-block',
+              options: {
+                start: 'debug:start',
+                end: 'debug:end',
+              },
+            },
+          ],
+        },
+      ],
+    },
     plugins: [
       new WebpackBarPlugin(),
-      new MiniCssExtractPlugin(),
     ],
     optimization: {
       minimizer: [
